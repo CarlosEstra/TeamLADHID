@@ -1,0 +1,181 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F2E3B3; /* Amarillo suave, cálido y natural */
+    color: #4A2C2A; /* Color marrón oscuro para buen contraste */
+    line-height: 1.6;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/027/769/308/non_2x/cartoon-mexican-travel-map-with-mexico-landmarks-vector.jpg'); 
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-attachment: fixed; /* Fija la imagen mientras se hace scroll */
+    min-height: 100vh; /* Asegura que la imagen ocupe toda la altura de la pantalla */
+    padding-bottom: 60px;
+}
+
+/* Estilo para la cabecera */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffffff; /* Blanco para el texto */
+    background: rgba(0, 0, 0, 0.4); /* Fondo semi-translúcido */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FF5733; /* Naranja fuerte, vibrante */
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out; /* Animación para que el texto aparezca suavemente */
+    text-shadow: 0 0 15px rgba(255, 87, 51, 0.8); /* Sombra difusa para un toque llamativo */
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #FFEB3B; /* Amarillo suave */
+    margin-top: 10px;
+    text-shadow: 0 0 10px rgba(255, 235, 59, 0.7); /* Resaltado suave con sombra amarilla */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Sección de selección de estado */
+.select-section {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4); /* Fondo blanco semi-translúcido */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+}
+
+.select-section label {
+    font-size: 2.2rem;
+    color: #D32F2F; /* Rojo mexicano */
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    text-transform: uppercase;
+}
+
+/* Hacer transparente el select, pero con bordes translúcidos */
+select {
+    padding: 12px;
+    width: 280px;
+    font-size: 1.4rem;
+    background-color: transparent; /* Fondo completamente transparente */
+    border: 2px solid rgba(255, 87, 51, 0.7); /* Borde translúcido color naranja */
+    color: #D32F2F; /* Rojo mexicano para las opciones */
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 8px;
+    animation: fadeIn 1.5s ease-out;
+    display: inline-block;
+}
+
+select option {
+    color: #4A2C2A; /* Marrón oscuro para las opciones */
+    font-weight: bold;
+}
+
+/* Eliminar el borde del select al hacer foco */
+select:focus {
+    outline: none;
+    border: 2px solid rgba(255, 87, 51, 1); /* Aumenta el borde cuando se hace foco */
+}
+
+/* Sección de comidas */
+.comidas-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Fondo translúcido */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+}
+
+/* Lista de comidas */
+.comidas-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para cada ítem de comida */
+.comidas-section li {
+    padding: 15px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.6); /* Fondo translúcido para cada receta */
+    border-left: 5px solid #FF5722; /* Línea naranja al lado izquierdo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comidas-section li:hover {
+    transform: translateY(-5px); /* Levantamiento suave al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comidas-section li strong {
+    font-size: 1.5rem;
+    color: #D32F2F; /* Rojo mexicano para los nombres de los platillos */
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 87, 51, 0.8); /* Sombra cálida que resalta */
+}
+
+.comidas-section li img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animación de entrada para los elementos */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos de hover para los enlaces (si los agregas) */
+a {
+    color: #FF5722;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #D32F2F;
+}
